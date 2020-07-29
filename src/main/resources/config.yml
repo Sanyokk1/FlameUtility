@@ -1,0 +1,6 @@
+suicide:
+  enabled: true
+god:
+  enabled: true
+feed:
+  enabled: true
