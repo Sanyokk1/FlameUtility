@@ -2,7 +2,7 @@ name: FlameUtility
 version: ${project.version}
 main: main.flameutility.FlameUtility
 api-version: 1.16
-prefix: ssFlameUtility
+prefix: FlameUtility
 authors: [Dragonraider]
 description: Special plugin for FameCraft server. Adds some useful things.
 website: https://discord.gg/YfYxVPw
@@ -10,9 +10,13 @@ commands:
   god:
     description: Предотвращает урон
     aliases: [terminator]
+  ungod:
+    description: Снимает режим бога
   suicide:
     description: Суицид
     aliases: [killme]
   feed:
-    description: Делает тебя сытым.
+    description: Делает тебя сытым
     aliases: [food]
+  fu reload:
+    description: Перезагрузка конфига

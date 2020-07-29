@@ -4,3 +4,8 @@ god:
   enabled: true
 feed:
   enabled: true
+ttk:
+  enabled: true
+JoinLeave:
+  join-enabled: true
+  leave-enabled: true

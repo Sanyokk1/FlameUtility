@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class God implements CommandExecutor {
+public class Ungod implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -14,8 +14,8 @@ public class God implements CommandExecutor {
             Player p = (Player) sender;
             if(p.hasPermission("flameutility.god"))
             {
-                p.setInvulnerable(true);
-                p.sendMessage(ChatColor.AQUA + "Ты больше не будешь получать урон! Теперь ты как бог!");
+                p.setInvulnerable(false);
+                p.sendMessage(ChatColor.DARK_RED + "Теперь ты снова будешь получать урон!");
             }
             else
             {
