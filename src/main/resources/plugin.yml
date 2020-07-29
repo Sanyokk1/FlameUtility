@@ -1,0 +1,8 @@
+name: FlameUtility
+version: ${project.version}
+main: main.flameutility.FlameUtility
+api-version: 1.16
+prefix: [FlameUtility]
+authors: [Dragonraider]
+description: Special plugin for FameCraft server. Adds some useful things.
+website: https://discord.gg/YfYxVPw
