@@ -5,5 +5,6 @@ god:
 feed:
   enabled: true
 JoinLeave:
-  join-enabled: true
+  join-enabled: false
+  join-with-fireworks: true
   leave-enabled: true

@@ -2,14 +2,13 @@ package main.flameutility;
 
 import main.flameutility.commands.*;
 import main.flameutility.events.Join;
+import main.flameutility.events.JoinFireWorks;
 import main.flameutility.events.Leave;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
-
-//!TODO: Приветствие феерверками
 
 public final class FlameUtility extends JavaPlugin {
 
@@ -50,6 +49,9 @@ public final class FlameUtility extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new Join(), this);
             log.info(FlutPrefix + ANSI_YELLOW + "JL Join Enabled" + ANSI_RESET);
         }
+        else if(getConfig().getBoolean("JoinLeave.join-with-fireworks")){
+            getServer().getPluginManager().registerEvents(new JoinFireWorks(), this);
+        }
         if(getConfig().getBoolean("JoinLeave.leave-enabled")){
             log.info(FlutPrefix + ANSI_YELLOW + "JL Leave Enabled" + ANSI_RESET);
             getServer().getPluginManager().registerEvents(new Leave(), this);
@@ -61,6 +63,7 @@ public final class FlameUtility extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        log.info(FlutPrefix + "Thanks for using Flame Utility!");
     }
 
     @Override
